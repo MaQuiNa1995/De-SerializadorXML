@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<unidades>
+    <unidad>
+        <nombre>Templario Tetrico</nombre>
+        <mineral>150</mineral>
+        <vespeno>75</vespeno>
+        <segundosCreacion>45</segundosCreacion>
+        <raza>Protos</raza>
+    </unidad>
+    <unidad>
+        <nombre>Coloso</nombre>
+        <mineral>300</mineral>
+        <vespeno>250</vespeno>
+        <segundosCreacion>58</segundosCreacion>
+        <raza>Protos</raza>
+    </unidad>
+</unidades>
