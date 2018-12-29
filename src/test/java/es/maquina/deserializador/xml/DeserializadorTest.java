@@ -1,8 +1,9 @@
 package es.maquina.deserializador.xml;
 
 import java.io.File;
-import java.io.IOException;
+import java.io.FileNotFoundException;
 import java.io.PrintWriter;
+import java.io.UnsupportedEncodingException;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
@@ -30,13 +31,6 @@ import junit.framework.TestCase;
 public class DeserializadorTest extends TestCase {
 
     /**
-     * Creacion de los ficheros a nivel de clase para poder usar la misma referencia
-     * en distintos test en el futuro
-     */
-    private File serializarFile = new File("serializar.xml");
-    private File deserializarFile = new File("deserializar.xml");
-
-    /**
      * De las siglas en Ingles (C.U.T) Class Under Test - Clase a Testear
      */
     @Autowired
@@ -55,6 +49,8 @@ public class DeserializadorTest extends TestCase {
      */
     @Test
     public void serilizarTest() {
+	File serializarFile = new File("serializar.xml");
+
 	serializarFile.deleteOnExit();
 
 	// Nos aseguramos de que no nos de un falso positivo eliminandole si existe para
@@ -97,9 +93,15 @@ public class DeserializadorTest extends TestCase {
      * (al hacer esta operacion en el propio test se consigue independencia)
      * <p>
      * El test fallara si lo que leemos del archivo no tiene longitud
+     * 
+     * @throws UnsupportedEncodingException Si el archivo no soporta la codificacion
+     *                                      seteada
+     * @throws FileNotFoundException        Si no se encuentra el archivo
      */
     @Test
-    public void deserializarTest() {
+    public void deserializarTest() throws UnsupportedEncodingException, FileNotFoundException {
+	File deserializarFile = new File("deserializar.xml");
+
 	deserializarFile.deleteOnExit();
 
 	// Creamos la String que contendra el xml formateado
@@ -112,9 +114,6 @@ public class DeserializadorTest extends TestCase {
 	// independiente de serilizarTest
 	try (PrintWriter printWriter = new PrintWriter(deserializarFile, "UTF-8")) {
 	    printWriter.write(xmlFormateado);
-	} catch (IOException exception) {
-	    // Si por algun casual no se pudiera crear el archivo el test fallaria
-	    fail();
 	}
 
 	// Recuperamos en una variable lo que hemos deserializado del archivo
