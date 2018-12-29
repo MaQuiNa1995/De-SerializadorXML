@@ -86,7 +86,7 @@ public class DeserializadorTest extends TestCase {
 	listaNodos.setListaNodos(listaElementos);
 
 	// El test pasa si el archivo resultante tiene algo dentro
-	cut.serializar(listaNodos, serializarFile, Elemento.class);
+	cut.serializar(listaNodos, serializarFile);
 	assertTrue(serializarFile.length() != 0);
     }
 

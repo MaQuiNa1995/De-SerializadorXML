@@ -42,7 +42,7 @@ public class Main {
 
 	    File fichero = new File("prueba.xml");
 
-	    deserelializador.serializar(listaNodos, fichero, Elemento.class);
+	    deserelializador.serializar(listaNodos, fichero);
 
 	    if (fichero.exists()) {
 		System.out.println(deserelializador.deserializar(fichero));
