@@ -13,13 +13,13 @@ import javax.xml.bind.annotation.XmlRootElement;
 public class ListaNodos {
 
     @XmlElement(name = "nodo")
-    private List<Elemento> listaNodos = new ArrayList<>();
+    private List<Nodo> listaNodos = new ArrayList<>();
 
-    public List<Elemento> getListaNodos() {
+    public List<Nodo> getListaNodos() {
 	return listaNodos;
     }
 
-    public void setListaNodos(List<Elemento> listaNodos) {
+    public void setListaNodos(List<Nodo> listaNodos) {
 	this.listaNodos = listaNodos;
     }
 

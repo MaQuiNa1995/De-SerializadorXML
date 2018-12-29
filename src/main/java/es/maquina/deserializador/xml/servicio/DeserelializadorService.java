@@ -8,7 +8,7 @@ import javax.xml.bind.JAXBException;
 import javax.xml.bind.Marshaller;
 import javax.xml.bind.Unmarshaller;
 
-import es.maquina.deserializador.xml.dominio.Elemento;
+import es.maquina.deserializador.xml.dominio.Nodo;
 import es.maquina.deserializador.xml.dominio.ListaNodos;
 
 /**
@@ -52,7 +52,7 @@ public class DeserelializadorService {
 
 	StringBuilder elemento = new StringBuilder();
 	if (unidadesLista != null) {
-	    for (Elemento unidadSacada : unidadesLista.getListaNodos()) {
+	    for (Nodo unidadSacada : unidadesLista.getListaNodos()) {
 		elemento.append(unidadSacada.toString()).append("\r\n");
 	    }
 	}

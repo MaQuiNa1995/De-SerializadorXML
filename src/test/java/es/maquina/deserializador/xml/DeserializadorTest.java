@@ -15,7 +15,7 @@ import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
 import es.maquina.deserializador.xml.config.Configuration;
-import es.maquina.deserializador.xml.dominio.Elemento;
+import es.maquina.deserializador.xml.dominio.Nodo;
 import es.maquina.deserializador.xml.dominio.ListaNodos;
 import es.maquina.deserializador.xml.servicio.DeserelializadorService;
 import junit.framework.TestCase;
@@ -64,10 +64,10 @@ public class DeserializadorTest extends TestCase {
 	Random numAleatorio = new Random();
 
 	// Creamos la lista de elementos a serializar
-	List<Elemento> listaElementos = new ArrayList<>();
+	List<Nodo> listaElementos = new ArrayList<>();
 
 	// Creamos el POJO donde guardaremos nuestros datos para serializar
-	Elemento elemento = new Elemento();
+	Nodo elemento = new Nodo();
 	elemento.setNombre("Zerling");
 	elemento.setRaza("Zerg");
 	elemento.setSegundosCreacion(numAleatorio.nextInt(90) + 1);

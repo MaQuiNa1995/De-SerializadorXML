@@ -5,7 +5,7 @@ import java.io.File;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
 import es.maquina.deserializador.xml.config.Configuration;
-import es.maquina.deserializador.xml.dominio.Elemento;
+import es.maquina.deserializador.xml.dominio.Nodo;
 import es.maquina.deserializador.xml.dominio.ListaNodos;
 import es.maquina.deserializador.xml.servicio.DeserelializadorService;
 
@@ -24,7 +24,7 @@ public class Main {
 	if (deserelializador != null) {
 	    ListaNodos listaNodos = new ListaNodos();
 
-	    Elemento elemento = new Elemento();
+	    Nodo elemento = new Nodo();
 	    elemento.setNombre("Templario Tetrico");
 	    elemento.setMineral(150);
 	    elemento.setVespeno(75);
@@ -32,7 +32,7 @@ public class Main {
 	    elemento.setSegundosCreacion(45);
 	    listaNodos.getListaNodos().add(elemento);
 
-	    elemento = new Elemento();
+	    elemento = new Nodo();
 	    elemento.setNombre("Coloso");
 	    elemento.setMineral(300);
 	    elemento.setRaza("Protos");

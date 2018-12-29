@@ -6,7 +6,7 @@ import javax.xml.bind.annotation.XmlRootElement;
 
 @XmlRootElement(name = "nodo")
 @XmlAccessorType(XmlAccessType.FIELD)
-public class Elemento {
+public class Nodo {
 
     private String raza;
     private String nombre;
