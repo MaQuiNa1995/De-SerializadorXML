@@ -40,7 +40,7 @@ public class Main {
 	    elemento.setVespeno(250);
 	    listaNodos.getListaNodos().add(elemento);
 
-	    File fichero = new File("Prueba.xml");
+	    File fichero = new File("prueba.xml");
 
 	    deserelializador.serializar(listaNodos, fichero, Elemento.class);
 
